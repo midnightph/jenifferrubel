@@ -63,7 +63,7 @@
   max-width: 420px;
   width: 100%;
   animation: fadeInUp 0.8s ease 0.2s forwards;
-  opacity: 0;
+  opacity: 1;
 }
 
 .name {
