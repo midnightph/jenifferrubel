@@ -24,7 +24,7 @@ export const profile: Profile = {
   studentsGraduated: "200+",
   aboutText:
     "Comecei minha jornada na área de extensão de cílios movida pela paixão de realçar a beleza natural de cada pessoa. Ao longo dos anos, me especializei nas principais técnicas do mercado e descobri que minha verdadeira vocação vai além de transformar olhares — é compartilhar conhecimento.\n\nHoje, me dedico a formar novas profissionais com excelência, ensinando técnicas avançadas e os segredos de um atendimento de alta qualidade. Cada aluna formada é a realização de um sonho que também foi meu: construir uma carreira de sucesso na beleza.",
-  phone: "5511999999999",
+  phone: "554498555509",
   whatsappLink: "https://wa.me/5511999999999",
   instagramLink: "https://instagram.com/jenifferrubel",
   tiktokLink: "https://tiktok.com/@jenifferrubel",
