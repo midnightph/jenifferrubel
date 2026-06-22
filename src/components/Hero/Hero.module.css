@@ -1,0 +1,142 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 32px;
+  background: linear-gradient(180deg, #faf8f5 0%, #f5efe9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(201, 169, 108, 0.08) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.photoWrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 3px solid var(--color-beige);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease forwards;
+  flex-shrink: 0;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-beige);
+  color: var(--color-gold-dark);
+  font-size: 3rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.content {
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-gold-dark);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.buttonIcon {
+  font-size: 1.1rem;
+}
+
+.goldDot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: var(--color-gold);
+  border-radius: var(--radius-full);
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 60px 20px 40px;
+  }
+
+  .photoWrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}

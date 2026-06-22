@@ -1,0 +1,56 @@
+.section {
+  padding: 60px 20px;
+  background: var(--color-nude-light);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-beige);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  background: white;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--color-gold);
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.submitBtn {
+  composes: btn btn-whatsapp from global;
+  margin-top: 8px;
+}
