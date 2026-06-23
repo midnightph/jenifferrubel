@@ -5,12 +5,10 @@
   align-items: center;
   justify-content: center;
   padding: 40px 20px 32px;
-  background: linear-gradient(
-  180deg,
-  #f7edf5 0%,
-  #f1d6e7 35%,
-  #df9dc5 100%
-);
+  background: linear-gradient(180deg,
+      #f7edf5 0%,
+      #f1d6e7 35%,
+      #df9dc5 100%);
   position: relative;
   overflow: hidden;
 }
@@ -22,11 +20,9 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(232, 168, 124, 0.08) 0%,
-    transparent 60%
-  );
+  background: radial-gradient(ellipse at 50% 0%,
+      rgba(232, 168, 124, 0.08) 0%,
+      transparent 60%);
   pointer-events: none;
 }
 
@@ -36,7 +32,6 @@
   height: 160px;
   border-radius: var(--radius-full);
   overflow: hidden;
-  border: 3px solid var(--color-pink);
   box-shadow: var(--shadow-md);
   margin-bottom: 20px;
   animation: fadeIn 0.8s ease forwards;
@@ -103,19 +98,108 @@
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
   width: 100%;
   max-width: 380px;
   margin: 0 auto;
 }
 
-.buttonIcon {
-  font-size: 2rem;
+.buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 64px;
+
+  border-radius: 20px;
+
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+
+  backdrop-filter: blur(10px);
+}
+
+.buttonIcon,
+.buttonIconCalendar {
+  font-size: 1.4rem;
+  flex-shrink: 0;
 }
 
 .buttonIconCalendar {
-  font-size: 2rem;
-  color: var(--color-rose-gold-dark);
+  color: #b55f96;
+}
+
+.buttons a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent);
+
+  transform: translateX(-150%);
+  transition: transform 0.6s ease;
+}
+
+.buttons a:hover::before {
+  transform: translateX(150%);
+}
+
+.buttons a:hover {
+  transform: translateY(-4px);
+}
+
+.buttons a:active {
+  transform: scale(0.98);
+}
+
+/* Agendar */
+
+.buttons a:nth-child(1) {
+  background: linear-gradient(135deg,
+      #ffffff,
+      #fdf5fa);
+
+  color: #8b4b72;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 10px 30px rgba(180, 90, 140, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Whats */
+
+.buttons a:nth-child(2) {
+  background: linear-gradient(135deg,
+      #25d366,
+      #128c7e);
+
+  color: white;
+
+  box-shadow:
+    0 12px 30px rgba(37, 211, 102, 0.35);
+}
+
+/* Cursos */
+
+.buttons a:nth-child(3) {
+  background: linear-gradient(135deg,
+      #b55f96,
+      #8b4b72);
+
+  color: white;
+
+  box-shadow:
+    0 12px 30px rgba(181, 95, 150, 0.35);
 }
 
 .goldDot {
