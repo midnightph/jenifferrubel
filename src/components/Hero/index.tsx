@@ -10,7 +10,9 @@ export default function Hero() {
   return (
     <section className={styles.hero} id="hero">
       <div className={styles.photoWrapper}>
-        <div className={styles.photoPlaceholder}>JR</div>
+        <div className={styles.photoPlaceholder}>
+          <img src={profile.photoUrl} />
+        </div>
       </div>
 
       <div className={styles.content}>

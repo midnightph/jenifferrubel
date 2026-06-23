@@ -16,14 +16,14 @@
   align-items: center;
   gap: 14px;
   padding: 14px 20px;
-  background: var(--color-nude-light);
-  border: 1px solid var(--color-beige);
+  background: var(--color-pink-light);
+  border: 1px solid var(--color-pink);
   border-radius: var(--radius-md);
   transition: all 0.3s ease;
 }
 
 .link:hover {
-  border-color: var(--color-gold);
+  border-color: var(--color-rose-gold);
   background: var(--color-white);
   transform: translateX(4px);
   box-shadow: var(--shadow-sm);
@@ -74,12 +74,12 @@
 }
 
 .arrow {
-  color: var(--color-beige-dark);
+  color: var(--color-pink-medium);
   font-size: 0.8rem;
   transition: transform 0.3s ease;
 }
 
 .link:hover .arrow {
   transform: translateX(4px);
-  color: var(--color-gold);
+  color: var(--color-rose-gold);
 }

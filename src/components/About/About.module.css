@@ -1,6 +1,6 @@
 .section {
   padding: 60px 20px;
-  background: var(--color-nude-light);
+  background: var(--color-pink-light);
 }
 
 .content {
@@ -17,7 +17,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  border: 3px solid var(--color-beige);
+  border: 3px solid var(--color-pink);
   box-shadow: var(--shadow-md);
   flex-shrink: 0;
 }
@@ -28,8 +28,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-beige);
-  color: var(--color-gold-dark);
+  background: var(--color-pink);
+  color: var(--color-rose-gold-dark);
   font-size: 3rem;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -60,14 +60,14 @@
   padding: 16px 8px;
   background: white;
   border-radius: 12px;
-  border: 1px solid var(--color-beige);
+  border: 1px solid var(--color-pink);
 }
 
 .statNumber {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-gold-dark);
+  color: var(--color-rose-gold-dark);
   margin-bottom: 4px;
 }
 

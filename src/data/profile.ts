@@ -18,7 +18,7 @@ export const profile: Profile = {
   name: "Jeniffer Rubel",
   title: "Especialista em Extensão de Cílios",
   description: "Transformando olhares e formando profissionais há mais de 5 anos. Especialista em extensão de cílios e formação profissional.",
-  photoUrl: "/images/jeniffer-hero.jpg",
+  photoUrl: "/images/jeniffer-hero.jpeg",
   experience: "5+ anos",
   clientsAttended: "500+",
   studentsGraduated: "200+",
