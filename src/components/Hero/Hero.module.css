@@ -1,11 +1,16 @@
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 40px 20px 32px;
-  background: linear-gradient(180deg, #c0705e 0%, #fdf0f0 100%);
+  background: linear-gradient(
+  180deg,
+  #f7edf5 0%,
+  #f1d6e7 35%,
+  #df9dc5 100%
+);
   position: relative;
   overflow: hidden;
 }
@@ -105,7 +110,12 @@
 }
 
 .buttonIcon {
-  font-size: 1.1rem;
+  font-size: 2rem;
+}
+
+.buttonIconCalendar {
+  font-size: 2rem;
+  color: var(--color-rose-gold-dark);
 }
 
 .goldDot {

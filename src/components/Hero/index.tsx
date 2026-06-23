@@ -2,6 +2,7 @@
 
 import { profile } from "@/data/profile";
 import styles from "./Hero.module.css";
+import { FaCalendar, FaCalendarAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function Hero() {
   const scheduleMessage = `Olá Jeniffer! Gostaria de agendar um atendimento.`;
@@ -27,7 +28,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            <span className={styles.buttonIcon}>📅</span>
+            <FaCalendarAlt className={styles.buttonIconCalendar} />
             Agendar Atendimento
           </a>
 
@@ -37,7 +38,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn btn-whatsapp"
           >
-            <span className={styles.buttonIcon}>💬</span>
+            <FaWhatsapp className={styles.buttonIcon} />
             WhatsApp
           </a>
 
@@ -51,15 +52,6 @@ export default function Hero() {
             Conhecer Cursos
           </a>
 
-          <a
-            href={profile.instagramLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline"
-          >
-            <span className={styles.buttonIcon}>📸</span>
-            Instagram
-          </a>
         </div>
       </div>
     </section>
