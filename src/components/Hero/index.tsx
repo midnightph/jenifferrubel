@@ -2,12 +2,9 @@
 
 import { profile } from "@/data/profile";
 import styles from "./Hero.module.css";
-import { FaCalendar, FaCalendarAlt, FaWhatsapp } from "react-icons/fa";
+import { FaBook, FaCalendarAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function Hero() {
-  const scheduleMessage = `Olá Jeniffer! Gostaria de agendar um atendimento.`;
-  const coursesMessage = `Olá Jeniffer! Tenho interesse em conhecer seus cursos.`;
-
   return (
     <section className={styles.hero} id="hero">
       <div className={styles.photoWrapper}>
@@ -22,12 +19,7 @@ export default function Hero() {
         <p className={styles.description}>{profile.description}</p>
 
         <div className={styles.buttons}>
-          <a
-            href={`https://wa.me/${profile.phone}?text=${encodeURIComponent(scheduleMessage)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
+          <a href="#agenda" className="btn btn-primary">
             <FaCalendarAlt className={styles.buttonIconCalendar} />
             Agendar Atendimento
           </a>
@@ -42,16 +34,10 @@ export default function Hero() {
             WhatsApp
           </a>
 
-          <a
-            href={`https://wa.me/${profile.phone}?text=${encodeURIComponent(coursesMessage)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
-            <span className={styles.buttonIcon}>📚</span>
+          <a href="#cursos" className="btn btn-secondary">
+            <FaBook className={styles.buttonIcon} />
             Conhecer Cursos
           </a>
-
         </div>
       </div>
     </section>

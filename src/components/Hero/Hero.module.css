@@ -6,9 +6,8 @@
   justify-content: center;
   padding: 40px 20px 32px;
   background: linear-gradient(180deg,
-      #f7edf5 0%,
-      #f1d6e7 35%,
-      #df9dc5 100%);
+      #1A1D26 0%,
+      #0F1117 100%);
   position: relative;
   overflow: hidden;
 }
@@ -21,7 +20,7 @@
   width: 200%;
   height: 200%;
   background: radial-gradient(ellipse at 50% 0%,
-      rgba(232, 168, 124, 0.08) 0%,
+      rgba(217, 30, 140, 0.08) 0%,
       transparent 60%);
   pointer-events: none;
 }
@@ -32,7 +31,7 @@
   height: 160px;
   border-radius: var(--radius-full);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 0 20px rgba(217, 30, 140, 0.3);
   margin-bottom: 20px;
   animation: fadeIn 0.8s ease forwards;
   flex-shrink: 0;
@@ -51,8 +50,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-pink);
-  color: var(--color-rose-gold-dark);
+  background: var(--color-bg-secondary);
+  color: var(--color-pink-primary);
   font-size: 3rem;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -70,7 +69,7 @@
   font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-text-primary);
   margin-bottom: 4px;
   letter-spacing: -0.5px;
 }
@@ -79,7 +78,7 @@
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 400;
-  color: var(--color-rose-gold-dark);
+  color: var(--color-pink-light);
   font-style: italic;
   margin-bottom: 8px;
 }
@@ -87,7 +86,7 @@
 .description {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 24px;
   max-width: 360px;
@@ -132,7 +131,7 @@
 }
 
 .buttonIconCalendar {
-  color: #b55f96;
+  color: var(--color-pink-primary);
 }
 
 .buttons a::before {
@@ -141,7 +140,7 @@
   inset: 0;
   background: linear-gradient(120deg,
       transparent,
-      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.1),
       transparent);
 
   transform: translateX(-150%);
@@ -161,23 +160,21 @@
 }
 
 /* Agendar */
-
 .buttons a:nth-child(1) {
   background: linear-gradient(135deg,
-      #ffffff,
-      #fdf5fa);
+      var(--color-bg-secondary),
+      rgba(217, 30, 140, 0.15));
 
-  color: #8b4b72;
+  color: var(--color-text-primary);
 
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(217, 30, 140, 0.3);
 
   box-shadow:
-    0 10px 30px rgba(180, 90, 140, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 10px 30px rgba(217, 30, 140, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* Whats */
-
+/* WhatsApp */
 .buttons a:nth-child(2) {
   background: linear-gradient(135deg,
       #25d366,
@@ -190,23 +187,22 @@
 }
 
 /* Cursos */
-
 .buttons a:nth-child(3) {
   background: linear-gradient(135deg,
-      #b55f96,
-      #8b4b72);
+      var(--color-purple-primary),
+      var(--color-pink-primary));
 
   color: white;
 
   box-shadow:
-    0 12px 30px rgba(181, 95, 150, 0.35);
+    0 12px 30px rgba(139, 61, 255, 0.35);
 }
 
 .goldDot {
   display: inline-block;
   width: 4px;
   height: 4px;
-  background: var(--color-rose-gold);
+  background: var(--color-gold);
   border-radius: var(--radius-full);
   margin: 0 6px;
   vertical-align: middle;

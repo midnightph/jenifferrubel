@@ -1,6 +1,6 @@
 .section {
   padding: 60px 20px;
-  background: var(--color-pink-light);
+  background: var(--color-bg-secondary);
 }
 
 .content {
@@ -17,8 +17,8 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  border: 3px solid var(--color-pink);
-  box-shadow: var(--shadow-md);
+  border: 3px solid var(--color-pink-primary);
+  box-shadow: 0 0 20px rgba(217, 30, 140, 0.2);
   flex-shrink: 0;
 }
 
@@ -28,8 +28,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-pink);
-  color: var(--color-rose-gold-dark);
+  background: var(--color-bg-primary);
+  color: var(--color-pink-primary);
   font-size: 3rem;
   font-family: var(--font-heading);
   font-weight: 700;
@@ -42,7 +42,7 @@
 .text {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 20px;
   white-space: pre-line;
@@ -58,22 +58,22 @@
 .statItem {
   text-align: center;
   padding: 16px 8px;
-  background: white;
+  background: var(--color-bg-primary);
   border-radius: 12px;
-  border: 1px solid var(--color-pink);
+  border: 1px solid rgba(217, 30, 140, 0.2);
 }
 
 .statNumber {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-rose-gold-dark);
+  color: var(--color-pink-light);
   margin-bottom: 4px;
 }
 
 .statLabel {
   font-family: var(--font-body);
   font-size: 0.75rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   line-height: 1.3;
 }

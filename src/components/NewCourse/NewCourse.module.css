@@ -1,6 +1,6 @@
 .section {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+  background: linear-gradient(135deg, #1A1D26 0%, #0F1117 100%);
   position: relative;
   overflow: hidden;
 }
@@ -12,14 +12,14 @@
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(ellipse at 70% 50%, rgba(232, 168, 124, 0.15) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 70% 50%, rgba(217, 30, 140, 0.12) 0%, transparent 50%);
   pointer-events: none;
 }
 
 .banner {
-  background: rgba(232, 168, 124, 0.1);
+  background: rgba(217, 30, 140, 0.08);
   border-radius: 20px;
-  border: 1px solid rgba(232, 168, 124, 0.3);
+  border: 1px solid rgba(217, 30, 140, 0.25);
   padding: 32px 24px;
   position: relative;
   z-index: 1;
@@ -31,7 +31,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--color-rose-gold);
+  background: linear-gradient(135deg, var(--color-pink-primary), var(--color-purple-primary));
   color: white;
   padding: 6px 14px;
   border-radius: 20px;
@@ -47,14 +47,14 @@
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 700;
-  color: white;
+  color: var(--color-text-primary);
   margin-bottom: 12px;
 }
 
 .desc {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -72,7 +72,7 @@
   gap: 10px;
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-secondary);
 }
 
 .benefitIcon {
@@ -87,13 +87,13 @@
 }
 
 .sectionHeader h2 {
-  color: white !important;
+  color: var(--color-text-primary) !important;
 }
 
 .sectionHeader p {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: var(--color-text-secondary) !important;
 }
 
 .sectionDivider {
-  background: var(--color-rose-gold);
+  background: var(--color-gold);
 }

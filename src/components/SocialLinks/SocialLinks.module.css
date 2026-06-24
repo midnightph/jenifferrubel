@@ -1,6 +1,6 @@
 .section {
   padding: 40px 20px;
-  background: var(--color-white);
+  background: var(--color-bg-primary);
 }
 
 .links {
@@ -16,15 +16,15 @@
   align-items: center;
   gap: 14px;
   padding: 14px 20px;
-  background: var(--color-pink-light);
-  border: 1px solid var(--color-pink);
+  background: var(--color-bg-secondary);
+  border: 1px solid rgba(217, 30, 140, 0.2);
   border-radius: var(--radius-md);
   transition: all 0.3s ease;
 }
 
 .link:hover {
-  border-color: var(--color-rose-gold);
-  background: var(--color-white);
+  border-color: var(--color-pink-primary);
+  background: rgba(217, 30, 140, 0.05);
   transform: translateX(4px);
   box-shadow: var(--shadow-sm);
 }
@@ -64,22 +64,22 @@
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--color-text-primary);
 }
 
 .linkLabel {
   font-family: var(--font-body);
   font-size: 0.8rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .arrow {
-  color: var(--color-pink-medium);
+  color: var(--color-pink-primary);
   font-size: 0.8rem;
   transition: transform 0.3s ease;
 }
 
 .link:hover .arrow {
   transform: translateX(4px);
-  color: var(--color-rose-gold);
+  color: var(--color-pink-light);
 }
