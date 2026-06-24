@@ -109,7 +109,7 @@
   justify-content: center;
   gap: 12px;
 
-  min-height: 64px;
+  min-height: 60px;
 
   border-radius: 20px;
 
@@ -196,6 +196,78 @@
 
   box-shadow:
     0 12px 30px rgba(139, 61, 255, 0.35);
+}
+
+/* NOVO CURSO - botão destacado */
+.newCourseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 60px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  padding: 16px 24px;
+  width: 100%;
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.5), 0 12px 30px rgba(245, 158, 11, 0.35);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.newCourseBtn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent);
+  transform: translateX(-150%);
+  transition: transform 0.6s ease;
+}
+
+.newCourseBtn:hover::before {
+  transform: translateX(150%);
+}
+
+.newCourseBtn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 50px rgba(245, 158, 11, 0.7), 0 16px 40px rgba(245, 158, 11, 0.45);
+}
+
+.newCourseBtn:active {
+  transform: scale(0.98);
+}
+
+.buttonIconStar {
+  font-size: 1.3rem;
+  color: #fff;
+  animation: spinStar 3s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.5), 0 12px 30px rgba(245, 158, 11, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(245, 158, 11, 0.8), 0 12px 30px rgba(245, 158, 11, 0.5);
+  }
+}
+
+@keyframes spinStar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .goldDot {

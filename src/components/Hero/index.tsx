@@ -2,9 +2,14 @@
 
 import { profile } from "@/data/profile";
 import styles from "./Hero.module.css";
-import { FaBook, FaCalendarAlt, FaWhatsapp } from "react-icons/fa";
+import { FaBook, FaCalendarAlt, FaWhatsapp, FaStar } from "react-icons/fa";
 
 export default function Hero() {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className={styles.hero} id="hero">
       <div className={styles.photoWrapper}>
@@ -23,6 +28,14 @@ export default function Hero() {
             <FaCalendarAlt className={styles.buttonIconCalendar} />
             Agendar Atendimento
           </a>
+
+          <button
+            onClick={() => scrollTo("novo-curso")}
+            className={styles.newCourseBtn}
+          >
+            <FaStar className={styles.buttonIconStar} />
+            Novo Curso - Garanta Sua Vaga
+          </button>
 
           <a
             href={`https://wa.me/${profile.phone}`}
