@@ -7,7 +7,6 @@ import styles from "./Schedule.module.css";
 
 export default function Schedule() {
   const [nome, setNome] = useState("");
-  const [telefone, setTelefone] = useState("");
   const [servico, setServico] = useState("");
   const [data, setData] = useState("");
   const [horario, setHorario] = useState("");
@@ -25,15 +24,19 @@ export default function Schedule() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!nome || !servico || !data || !horario) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+
     const message = [
-      `*Agendamento - ${profile.name}*`,
+      `*Olá, sou ${nome} e gostaria de agendar um horário.*`,
+      `Tenho prefêrencia nos seguintes:`,
       "",
-      `*Nome:* ${nome}`,
-      `*Telefone:* ${telefone}`,
       `*Serviço:* ${servico}`,
       `*Data:* ${data}`,
       `*Horário:* ${horario}`,
-      mensagem ? `*Mensagem:* ${mensagem}` : "",
+      mensagem ? `*Observação:* ${mensagem}` : "",
     ]
       .filter(Boolean)
       .join("\n");
@@ -62,20 +65,6 @@ export default function Schedule() {
               type="text"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.fieldGroup}>
-            <label className={styles.label} htmlFor="telefone">
-              Telefone
-            </label>
-            <input
-              id="telefone"
-              className={styles.input}
-              type="tel"
-              value={telefone}
-              onChange={(e) => setTelefone(e.target.value)}
               required
             />
           </div>
@@ -136,7 +125,7 @@ export default function Schedule() {
 
           <div className={styles.fieldGroup}>
             <label className={styles.label} htmlFor="mensagem">
-              Mensagem (opcional)
+              Observação (opcional)
             </label>
             <textarea
               id="mensagem"
