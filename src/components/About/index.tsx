@@ -7,7 +7,6 @@ export default function About() {
   const stats = [
     { number: profile.experience, label: "Anos de Experiência" },
     { number: profile.clientsAttended, label: "Clientes Atendidas" },
-    { number: profile.studentsGraduated, label: "Alunas Formadas" },
   ];
 
   return (
@@ -21,7 +20,7 @@ export default function About() {
 
         <div className={styles.content}>
           <div className={styles.photoWrapper}>
-            <div className={styles.photoPlaceholder}>JR</div>
+            <img src={profile.photoUrl} className={styles.photo} />
           </div>
 
           <div className={styles.textContent}>

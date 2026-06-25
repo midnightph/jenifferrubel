@@ -19,7 +19,7 @@ export const profile: Profile = {
   title: "Especialista em Extensão de Cílios",
   description: "Transformando olhares e formando profissionais há mais de 3 anos. Especialista em extensão de cílios e formação profissional.",
   photoUrl: "/images/jeniffer-hero.jpeg",
-  experience: "5+ anos",
+  experience: "3+ anos",
   clientsAttended: "500+",
   studentsGraduated: "200+",
   aboutText:
