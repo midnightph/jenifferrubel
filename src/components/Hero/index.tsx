@@ -24,31 +24,41 @@ export default function Hero() {
         <p className={styles.description}>{profile.description}</p>
 
         <div className={styles.buttons}>
-          <a href="#agenda" className="btn btn-primary">
-            <FaCalendarAlt className={styles.buttonIconCalendar} />
-            Agendar Atendimento
-          </a>
-
+          {/* 1 — Primary CTA: Novo Curso (gold accent) */}
           <button
             onClick={() => scrollTo("novo-curso")}
-            className={styles.newCourseBtn}
+            className={`${styles.heroButton} ${styles.primaryButton}`}
           >
-            <FaStar className={styles.buttonIconStar} />
+            <FaStar className={styles.heroIcon} />
             Novo Curso - Garanta Sua Vaga
           </button>
 
+          {/* 2 — Schedule: Agendar Atendimento (rose/pink accent) */}
+          <a
+            href="#agenda"
+            className={`${styles.heroButton} ${styles.scheduleButton}`}
+          >
+            <FaCalendarAlt className={styles.heroIcon} />
+            Agendar Atendimento
+          </a>
+
+          {/* 3 — WhatsApp (green accent) */}
           <a
             href={`https://wa.me/${profile.phone}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-whatsapp"
+            className={`${styles.heroButton} ${styles.whatsappButton}`}
           >
-            <FaWhatsapp className={styles.buttonIcon} />
+            <FaWhatsapp className={styles.heroIcon} />
             WhatsApp
           </a>
 
-          <a href="#cursos" className="btn btn-secondary">
-            <FaBook className={styles.buttonIcon} />
+          {/* 4 — Secondary: Conhecer Cursos (neutral) */}
+          <a
+            href="#cursos"
+            className={`${styles.heroButton} ${styles.secondaryButton}`}
+          >
+            <FaBook className={styles.heroIcon} />
             Conhecer Cursos
           </a>
         </div>
