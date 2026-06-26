@@ -9,7 +9,7 @@ export default function Courses() {
     <section id="cursos" className={styles.section}>
       <div className="container">
         <div className="section-header">
-          <h2>Cursos Presenciais</h2>
+          <h2>Cursos</h2>
           <p>Forme-se com quem entende do assunto</p>
           <div className="section-divider" />
         </div>
@@ -18,9 +18,9 @@ export default function Courses() {
           {courses.map((course) => (
             <div key={course.id} className={styles.card}>
               <div className={styles.imageWrapper}>
-                <div className={styles.placeholder}>
+                {course.imageUrl ? <img src={course.imageUrl} /> : <div className={styles.placeholder}>
                   {course.name.charAt(0)}
-                </div>
+                </div>}
               </div>
 
               <div className={styles.cardContent}>

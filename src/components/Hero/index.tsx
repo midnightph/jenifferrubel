@@ -30,8 +30,16 @@ export default function Hero() {
             className={`${styles.heroButton} ${styles.primaryButton}`}
           >
             <FaStar className={styles.heroIcon} />
-            Novo Curso - Garanta Sua Vaga
+            Lista de Espera - Fox em Segredo
           </button>
+
+          <a
+            href="#cursos"
+            className={`${styles.heroButton} ${styles.secondaryButton}`}
+          >
+            <FaBook className={styles.heroIcon} />
+            Conhecer Cursos
+          </a>
 
           {/* 2 — Schedule: Agendar Atendimento (rose/pink accent) */}
           <a
@@ -54,13 +62,6 @@ export default function Hero() {
           </a>
 
           {/* 4 — Secondary: Conhecer Cursos (neutral) */}
-          <a
-            href="#cursos"
-            className={`${styles.heroButton} ${styles.secondaryButton}`}
-          >
-            <FaBook className={styles.heroIcon} />
-            Conhecer Cursos
-          </a>
         </div>
       </div>
     </section>
