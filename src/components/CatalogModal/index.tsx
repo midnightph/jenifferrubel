@@ -1,7 +1,11 @@
 "use client";
 
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
+import { Document, Page } from "react-pdf";
 import styles from "./CatalogModal.module.css";
+import { pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 interface CatalogModalProps {
   isOpen: boolean;
@@ -16,11 +20,11 @@ export default function CatalogModal({
   pdfUrl,
   title = "Catálogo",
 }: CatalogModalProps) {
+  const [numPages, setNumPages] = useState<number>(0);
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
+      if (e.key === "Escape") onClose();
     },
     [onClose]
   );
@@ -38,9 +42,11 @@ export default function CatalogModal({
   }, [isOpen, handleKeyDown]);
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
+    if (e.target === e.currentTarget) onClose();
+  };
+
+  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+    setNumPages(numPages);
   };
 
   if (!isOpen) return null;
@@ -53,7 +59,6 @@ export default function CatalogModal({
           <button
             className={styles.closeBtn}
             onClick={onClose}
-            aria-label="Fechar catálogo"
             type="button"
           >
             ✕
@@ -61,12 +66,19 @@ export default function CatalogModal({
         </div>
 
         <div className={styles.pdfContainer}>
-          <iframe
-            className={styles.pdfFrame}
-            src={`${pdfUrl}#toolbar=1&navpanes=1`}
-            title={title}
-            loading="lazy"
-          />
+          <Document
+            file={pdfUrl}
+            onLoadSuccess={onDocumentLoadSuccess}
+            loading="Carregando PDF..."
+          >
+            {Array.from(new Array(numPages), (_, i) => (
+              <Page
+                key={`page_${i + 1}`}
+                pageNumber={i + 1}
+                className={styles.pdfPage}
+              />
+            ))}
+          </Document>
         </div>
       </div>
     </div>

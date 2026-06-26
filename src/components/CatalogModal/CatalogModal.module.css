@@ -75,7 +75,19 @@
 .pdfContainer {
   flex: 1;
   min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
+}
+
+.pdfPage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.pdfPage:last-child {
+  margin-bottom: 0;
 }
 
 .pdfFrame {

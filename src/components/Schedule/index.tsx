@@ -3,7 +3,14 @@
 import React, { useState } from "react";
 import { profile } from "@/data/profile";
 import { services } from "@/data/services";
-import CatalogModal from "@/components/CatalogModal";
+import dynamic from "next/dynamic";
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+
+const CatalogModal = dynamic(
+  () => import("@/components/CatalogModal"),
+  { ssr: false }
+);
 import styles from "./Schedule.module.css";
 
 export default function Schedule() {
