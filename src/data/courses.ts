@@ -74,8 +74,8 @@ export const newCourse: Course = {
   description:
     "O curso mais aguardado do ano está chegando! Aprenda as técnicas mais modernas do Fox Em Segredo, efeitos especiais e designs personalizados que estão dominando o mercado.",
   benefits: [
-    { icon: "🔥", text: "Mega Volume 3D a 6D" },
-    { icon: "🎨", text: "Efeitos especiais (wet, diamante, leque)" },
+    { icon: "🔥", text: "Entre antes de todos na lista de espera" },
+    { icon: "🎨", text: "Aprenda a técnica que está dominando o mercado" },
     { icon: "📊", text: "Designs personalizados por formato de olho" },
     { icon: "🏆", text: "Acompanhamento durante um mês" },
   ],

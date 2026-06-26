@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 import { profile } from "@/data/profile";
 import { services } from "@/data/services";
+import CatalogModal from "@/components/CatalogModal";
 import styles from "./Schedule.module.css";
 
 export default function Schedule() {
   const [nome, setNome] = useState("");
   const [servico, setServico] = useState("");
+  const [openCatalog, setOpenCatalog] = useState(false);
   const [data, setData] = useState("");
   const [horario, setHorario] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -87,40 +89,13 @@ export default function Schedule() {
                 </option>
               ))}
             </select>
-          </div>
-
-          <div className={styles.fieldGroup}>
-            <label className={styles.label} htmlFor="data">
-              Data
-            </label>
-            <input
-              id="data"
-              className={styles.input}
-              type="date"
-              value={data}
-              onChange={(e) => setData(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className={styles.fieldGroup}>
-            <label className={styles.label} htmlFor="horario">
-              Horário
-            </label>
-            <select
-              id="horario"
-              className={styles.select}
-              value={horario}
-              onChange={(e) => setHorario(e.target.value)}
-              required
+            <button
+              type="button"
+              className={styles.catalogBtn}
+              onClick={() => setOpenCatalog(true)}
             >
-              <option value="">Selecione um horário</option>
-              {generateTimeOptions().map((time) => (
-                <option key={time} value={time}>
-                  {time}
-                </option>
-              ))}
-            </select>
+              Ver Catálogo de Procedimentos
+            </button>
           </div>
 
           <div className={styles.fieldGroup}>
@@ -140,6 +115,13 @@ export default function Schedule() {
             Solicitar Agendamento via WhatsApp
           </button>
         </form>
+
+        <CatalogModal
+          isOpen={openCatalog}
+          onClose={() => setOpenCatalog(false)}
+          pdfUrl="/procedimentos.pdf"
+          title="Catálogo de Procedimentos"
+        />
       </div>
     </section>
   );

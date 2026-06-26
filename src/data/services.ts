@@ -4,11 +4,16 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  { id: "alongamento", name: "Alongamento de Cílios" },
-  { id: "volume-russo", name: "Volume Russo" },
-  { id: "mega-volume", name: "Mega Volume" },
-  { id: "manutencao", name: "Manutenção" },
-  { id: "curso-iniciante", name: "Curso Iniciante" },
-  { id: "curso-avancado", name: "Curso Avançado" },
-  { id: "curso-completo", name: "Curso Completo" },
+  { id: "volume-delicado", name: "Volume Delicado" },
+  { id: "volume-glam", name: "Volume Glam" },
+  { id: "volume-luxo", name: "Volume Luxo" },
+  { id: "efeito-rimel", name: "Efeito Rímel" },
+  { id: "efeito-kim-kardashian", name: "Efeito Kim Kardashian" },
+  { id: "efeito-fox-eyes", name: "Efeito Fox Eyes" },
+  { id: "efeito-drama", name: "Efeito Drama" },
+  { id: "designer-sobrancelha", name: "Designer de Sobrancelha" },
+  {
+    id: "designer-sobrancelha-henna",
+    name: "Designer de Sobrancelha com Henna",
+  },
 ];
