@@ -35,7 +35,7 @@ export default function NewCourse() {
 
         <div className={styles.ctaWrapper}>
           <a
-            href={`https://wa.me/${profile.phone}?text=${encodeURIComponent(newCourse.whatsappMessage)}`}
+            href={`https://chat.whatsapp.com/Bwu4R5FgZQ98t5hTML9xhi?mode=gi_t`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"

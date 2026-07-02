@@ -40,7 +40,7 @@ export const courses: Course[] = [
     id: "curso-avancado",
     name: "Curso Avançado de Retenção",
     description:
-      "Aperfeiçoe suas técnicas e domine as Têndencias com precisão. Para profissionais que já atuam na área e desejam se especializar.",
+      "Domine a Retenção e Entregue Extensões que Duram. Aprenda os segredos do pH dos cílios, técnica de acoplagem correta e tudo sobre adesivos. Um dia intensivo com mentoramento personalizado para eliminar os erros que comprometem seus resultados e conquistar clientes que voltam.",
     benefits: [
       { icon: "🎯", text: "Conteúdo totalmente personalizado para Retenção" },
       { icon: "📅", text: "Curso com duração de 1 dia, com conteúdo direcionado" },
@@ -70,14 +70,14 @@ export const courses: Course[] = [
 
 export const newCourse: Course = {
   id: "novo-curso",
-  name: "Fox em Segredo - Entra já na Lista De Espera",
+  name: "Fox sem Segredo - Entra já na Lista De Espera",
   description:
-    "O curso mais aguardado do ano está chegando! Aprenda as técnicas mais modernas do Fox Em Segredo, efeitos especiais e designs personalizados que estão dominando o mercado.",
+    "O curso online mais aguardado do ano está chegando! Aprenda as técnicas mais modernas do Fox sem Segredo, efeitos especiais e designs personalizados que estão dominando o mercado.",
   benefits: [
     { icon: "🔥", text: "Entre antes de todos na lista de espera" },
-    { icon: "🎨", text: "Aprenda a técnica que está dominando o mercado" },
+    { icon: "🎨", text: "Aprenda 3 formas de trabalhar com o efeito Fox" },
     { icon: "📊", text: "Designs personalizados por formato de olho" },
-    { icon: "🏆", text: "Acompanhamento durante um mês" },
+    { icon: "🏆", text: "Curso de 1 ano" },
   ],
   imageUrl: "/images/curso-fox-segredo.jpeg",
   whatsappMessage:
