@@ -18,9 +18,14 @@ export default function Courses() {
           {courses.map((course) => (
             <div key={course.id} className={styles.card}>
               <div className={styles.imageWrapper}>
-                {course.imageUrl ? <img src={course.imageUrl} /> : <div className={styles.placeholder}>
-                  {course.name.charAt(0)}
-                </div>}
+                {course.imageUrl ? (
+                  <img src={course.imageUrl} alt={course.name} />
+                ) : (
+                  <div className={styles.placeholder}>
+                    <span className={styles.placeholderIcon}>📚</span>
+                    <span className={styles.placeholderText}>{course.name}</span>
+                  </div>
+                )}
               </div>
 
               <div className={styles.cardContent}>

@@ -47,7 +47,7 @@ export const courses: Course[] = [
       { icon: "💡", text: "Aperfeiçoe suas técnicas e corrija erros" },
       { icon: "💖", text: "Acompanhamento durante um mês" },
     ],
-    imageUrl: "/images/curso-avancado.jpg",
+    imageUrl: "",
     whatsappMessage:
       "Olá Jeniffer! Tenho interesse no Curso Avançado de Retenção. Gostaria de saber mais informações.",
   },
@@ -62,7 +62,7 @@ export const courses: Course[] = [
       { icon: "💼", text: "Aperfeiçoe suas técnicas e corrija erros" },
       { icon: "🆘", text: "Acompanhamento durante um mês" },
     ],
-    imageUrl: "/images/curso-completo.jpg",
+    imageUrl: "",
     whatsappMessage:
       "Olá Jeniffer! Tenho interesse no Curso Presencial Avançado Têndencias. Gostaria de saber mais informações.",
   },
@@ -79,7 +79,7 @@ export const newCourse: Course = {
     { icon: "📊", text: "Designs personalizados por formato de olho" },
     { icon: "🏆", text: "Acompanhamento durante um mês" },
   ],
-  imageUrl: "/images/novo-curso.jpg",
+  imageUrl: "/images/curso-fox-segredo.jpeg",
   whatsappMessage:
     "Olá Jeniffer! Tenho interesse no Novo Curso de Mega Volume e Efeitos Especiais. Quero garantir minha vaga!",
 };

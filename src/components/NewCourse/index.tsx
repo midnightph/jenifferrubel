@@ -15,6 +15,11 @@ export default function NewCourse() {
 
       <div className={styles.banner}>
         <div className={styles.badge}>🔥 NOVO</div>
+        {newCourse.imageUrl && (
+          <div className={styles.imageWrapper}>
+            <img src={newCourse.imageUrl} alt={newCourse.name} />
+          </div>
+        )}
         <h3 className={styles.title}>{newCourse.name}</h3>
         <p className={styles.desc}>{newCourse.description}</p>
 
