@@ -20,6 +20,7 @@ export default function NewCourse() {
             <img src={newCourse.imageUrl} alt={newCourse.name} />
           </div>
         )}
+        <div className={styles.content} >
         <h3 className={styles.title}>{newCourse.name}</h3>
         <p className={styles.desc}>{newCourse.description}</p>
 
@@ -49,6 +50,7 @@ export default function NewCourse() {
           >
             Saiba Mais
           </a>
+        </div>
         </div>
       </div>
     </section>
